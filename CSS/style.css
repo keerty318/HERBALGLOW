@@ -28,7 +28,7 @@ header{
     font-size: 70px;
     font-family: 'Playfair Display', serif;
     font-weight: bolder;
-    color: #2E7D32; 
+    color: #2e8432; 
     text-align: center;
     font-size: clamp(32px, 8vw, 110px);
     white-space: normal;   
