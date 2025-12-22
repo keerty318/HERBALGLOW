@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HerbalGlow</title>
-    <link rel="icon" href="../IMAGES/mainlogos.png" href="favicon.png">
 
-    <link rel="stylesheet" href="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HerbalGlow</title>
+  <link rel="icon" href="../IMAGES/mainlogos.png" href="favicon.png">
 
-    <link rel="stylesheet" href="../CSS/style.css" />
-  </head>
-  <body class="login">
+  <link rel="stylesheet" href="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-<!-- register page -->
-    <!-- <section class="register">
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body class="login">
+
+  <!-- register page -->
+  <!-- <section class="register">
       <div class="login-heading">
         <h3>Sign Up</h3>
       </div>
@@ -59,55 +61,59 @@
       </div>
     </section> -->
 
-    <section class="register">
-  <div class="container">
+  <section class="register">
+    <div class="container">
 
-    <div class="login-heading">
-      <h2 style="text-align:center;">Sign Up</h2>
-    </div>
+      <div class="login-heading">
+        <h2 style="text-align:center;">Sign Up</h2>
+      </div>
 
-    <form class="login-form">
+      <form class="login-form" action="/submit" method="post">
 
-      <div class="form-group">
         <div class="form-group">
-        <label style="font-size: large;">👤Username</label>
-        <input type="text" class="form-control" required>
-      </div>
+          <div class="form-group">
+            <label style="font-size: large;">👤Username</label>
+            <input type="text" class="form-control" required name="uname">
+          </div>
 
-      <div class="form-group">
-        <label style="font-size: large;">📞Phone Number</label>
-        <input type="number" class="form-control" required>
-      </div>
+          <div class="form-group">
+            <label style="font-size: large;">📞Phone Number</label>
+            <input type="number" class="form-control" required name="phone">
+          </div>
 
-      <div class="form-group">
-        <label style="font-size: large;">✉️Email</label>
-        <input type="email" class="form-control" required>
-      </div>
+          <div class="form-group">
+            <label style="font-size: large;">✉️Email</label>
+            <input type="email" class="form-control" required name="mail">
+          </div>
 
-      <div class="form-group">
-        <label style="font-size: large;">🔑Password</label>
-        <input type="password" class="form-control" required>
-      </div>
+          <div class="form-group">
+            <label style="font-size: large;">🔑Password</label>
+            <input type="password" class="form-control" required name="pwd">
+          </div>
 
 
-      <div class="form-group">
-        <button type="submit"
-          class="btn"
-          style="width:100%; background:linear-gradient(to right,#0097b2,#7ed957); color:white; border:none;padding-left: 34px;padding-right :34px;font-size: 20px;">
-          sign-up
-        </button>
-      </div>
-
-     
-
-    </form>
-
-  </div>
-</section>
+          <div class="form-group">
+            <button type="submit" class="btn"
+              style="width:100%; background:linear-gradient(to right,#0097b2,#7ed957); color:white; border:none;padding-left: 34px;padding-right :34px;font-size: 20px;">
+              sign-up
+            </button>
+          </div>
 
 
 
-    <script src="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+      </form>
+      <!-- this is to throw the error or success msg from flask -->
+      <p>
+        {{ message }}
+      </p>
 
-  </body>
+    </div>
+  </section>
+
+
+
+  <script src="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
