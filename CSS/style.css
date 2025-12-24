@@ -368,8 +368,82 @@ header{
 
 /* --------------------------------------------------------------------------------- */
 /* quiz  */
+.quiz{
+    background-color: #F0FFF0;
+   
+}
+
 .quiz-headings{
     text-align: center;
+}
+.quiz-headings h1{
+    
+    color: purple;
+    font-size: 40px;
+}
+.quiz-form .card{
+    line-height: 1.3;
+    font-size: 20px;
+    padding: 13px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
+    
+}
+.form-check-label {
+    cursor: pointer;
+}
+.form-check.card{
+    color: #000;
+    cursor: pointer;
+    
+    
+}
+.form-check.card:hover{
+   border-color: #6fdc8c;
+   color: #2E7D32;
+   cursor: pointer;
+    
+}
+h3{
+    margin-top: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #2E7D32;
+    text-align: center;
+    
+}
+.quiz-section p{
+    margin-bottom: 30px;
+    font-size: 40px;
+    /* color: #6f42c1 */
+;
+}
+
+.quiz-form input[type="radio"]{
+    display: none;
+}
+.ques.card{
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 720px;
+    margin-bottom: 30px;
+    
+    
+}
+@media(max-width:520px){
+    .quiz-headings h1{
+        font-size: 30px;
+    }
+}
+@media(max-width:520px){
+   .ques.card {
+       margin: 20px 20px;
+       padding: 0 20px;
+       width: auto;
+       margin-bottom: 30px;
+    }
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -584,6 +658,134 @@ header{
 }
 
 /* --------------------------------------the end------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
