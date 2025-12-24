@@ -79,16 +79,16 @@
       <h2 style="text-align:center;">Login</h2>
     </div>
 
-    <form class="login-form">
+    <form class="login-form" action="/login" method="post">
 
       <div class="form-group">
         <label style="font-size: large;">👤Username</label>
-        <input type="text" class="form-control" required>
+        <input type="text" class="form-control" required name="uname">
       </div>
 
       <div class="form-group">
         <label style="font-size: large;">🔑Password</label>
-        <input type="password" class="form-control" required>
+        <input type="password" class="form-control" required name="pwd">
       </div>
 
       <div class="form-group text-end" >
@@ -108,10 +108,19 @@
       </p>
 
       <p style="text-align:center;">
-        <a href="register.html">Create account</a>
+        <a href="/register">Create account</a>
       </p>
 
     </form>
+
+    <!-- to display msgs/errors -->
+
+    <!-- jinja -->
+     {% if message %}
+      <p style="text-align:center; font-weight:bold;">
+        {{ message }}
+      </p>
+      {% endif %}
 
   </div>
 </section>

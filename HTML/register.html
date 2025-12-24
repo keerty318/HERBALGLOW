@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HerbalGlow</title>
   <link rel="icon" href="../IMAGES/mainlogos.png" href="favicon.png">
+  <!-- href="favicon.png" -->
 
   <link rel="stylesheet" href="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
@@ -68,7 +69,7 @@
         <h2 style="text-align:center;">Sign Up</h2>
       </div>
 
-      <form class="login-form" action="/submit" method="post">
+      <form class="login-form" action="/register" method="post">
 
         <div class="form-group">
           <div class="form-group">
@@ -103,9 +104,15 @@
 
       </form>
       <!-- this is to throw the error or success msg from flask -->
-      <p>
+
+      <!-- jijang -->
+      {% if message %}
+      <p style="text-align:center; font-weight:bold;">
         {{ message }}
       </p>
+      {% endif %}
+
+      
 
     </div>
   </section>
