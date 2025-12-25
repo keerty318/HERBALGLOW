@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HerbalGlow</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HerbalGlow</title>
    <link rel="icon" href="../IMAGES/mainlogos.png" href="favicon.png">
 
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   <link rel="stylesheet" href="../CSS/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body class="cart">
-        <!-- watsapp logo -->
-     <a href="https://wa.me/918903077052" class="watsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="watsapp">
+   <!-- watsapp logo -->
+   <a href="https://wa.me/918903077052" class="watsapp-btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="watsapp">
 
-     </a>
-  <!-- header bar -->
-    <header class="main-header">HerbalGlow</header>
-    <p style="text-align: center" class="header-subline">Handmade with care</p>
+   </a>
+   <!-- header bar -->
+   <header class="main-header">HerbalGlow</header>
+   <p style="text-align: center" class="header-subline">Handmade with care</p>
 
-    <p>hii</p>
-   
+   <section class="cart">
+      <h1 style="text-align: center;">Your Cart</h1>
+
+      {% for item in cart %}
+      <h3 class="margin-top:30px">
+         {{ item.prod_name }} -
+         ₹{{ item.prod_price }} x {{ item.cart_qty }}
+
+      </h3>
+      {% endfor %}
+      <hr>
+      
+      <h3>{{tot_amt}}</h3>
+      <hr>
+
+      <a href="/place_order" class="btn btn-success">
+         Place Order
+      </a>
+
+
+   </section>
+
 </body>
+
 </html>

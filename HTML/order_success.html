@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Placed - HerbalGlow</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .success-card {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card success-card shadow">
+            <div class="card-body text-center">
+
+                <h2 class="text-success mb-3"> Order Placed Successfully!</h2>
+
+                <p class="fs-5">
+                    Thank you for shopping with <strong>HerbalGlow</strong>
+                </p>
+
+                <hr>
+
+                <p class="fs-5">
+                    <strong>Your Order ID:</strong><br>
+                    <span class="badge bg-dark fs-6 mt-2">
+                        #{{ order_id }}
+                    </span>
+                </p>
+
+                <p class="mt-3 text-muted">
+                    We have received your order.<br>
+                    Our team will contact you soon to confirm availability.
+                </p>
+
+                <hr>
+
+                <h5 class="mt-3"> Contact Details</h5>
+                <p class="mb-1">Phone: <strong>+91 7876133093</strong></p>
+                <p>Email: <strong>herbalglow@gmail.com</strong></p>
+
+                <div class="mt-4">
+                    <a href="/products/face" class="btn btn-outline-success">
+                        Continue Shopping
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
