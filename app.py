@@ -1,13 +1,13 @@
-from flask import Flask, render_template, request, redirect
-from db import cursor
+from flask import Flask, render_template, request, redirect,session
+from db import cursor,conn
 import product
-import cart
+
 
 app = Flask(__name__, template_folder="HTML", static_folder=".", static_url_path="")
 # requires to mantain session for individual user
 app.secret_key = "first_glow"
 
-# ✅ REGISTER PRODUCT ROUTES HERE
+# REGISTER PRODUCT ROUTES HERE
 product.register_product_routes(app)
 
 
@@ -25,13 +25,14 @@ def login():
     pwd   = request.form["pwd"]
 
     cursor.execute(
-        "SELECT password FROM User_Details WHERE user_Name=%s",
+        "SELECT password,user_Id FROM User_Details WHERE user_Name=%s",
         (uname,)
     )
     res = cursor.fetchone()
 
     if res and res["password"] == pwd:
-        return redirect("/products")
+        session["customer_id"] = res["user_Id"]
+        return redirect("/products/face")
 
     return render_template("login.html", message="Invalid login")
 
@@ -57,7 +58,9 @@ def register():
         "INSERT INTO User_Details (user_Name, phoneNum, email, password) VALUES (%s,%s,%s,%s)",
         (uname, phone, mail, pwd)
     )
+    conn.commit()
     return redirect("/login")
+
 
 
 if __name__ == "__main__":
