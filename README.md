@@ -88,7 +88,7 @@ HerbalGlow-Ecommerce
 ├── static
 │   ├── CSS
 │   ├── IMAGES
-│   ├── JS
+│   ├── JAVASCRIPT
 │   └── BOOTSTRAP
 │
 ├── templates
@@ -104,24 +104,25 @@ HerbalGlow-Ecommerce
 
 ---
 
-# 🚀 Installation
+## 🚀 Installation
 
-## 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/HerbalGlow-Ecommerce.git
-```
-
-## 2. Navigate to the Project Folder
+### 1. Clone the Repository
 
 ```bash
-cd HerbalGlow-Ecommerce
+git clone https://github.com/keerty318/HERBALGLOW.git
 ```
 
-## 3. Install Required Packages
+### 2. Navigate to the Project Folder
+
+```bash
+cd HERBALGLOW
+```
+
+### 3. Install Required Packages
 
 ```bash
 pip install -r requirements.txt
+
 ```
 
 ## 4. Create a .env File
@@ -129,16 +130,16 @@ pip install -r requirements.txt
 Create a `.env` file in the project root and add:
 
 ```env
-RAZORPAY_KEY_ID=your_key_id
-RAZORPAY_KEY_SECRET=your_key_secret
 FLASK_SECRET_KEY=your_secret_key
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_key_secret
 ```
 
-## 5. Configure Database
+## 5. Configure the Database
 
-Update your MySQL database credentials inside `db.py`.
-
-Import the SQL database into MySQL before running the project.
+- Create a MySQL database named `herbalglow`.
+- Import the `database.sql` file.
+- Update the MySQL database credentials in `db.py` with your own username and password.
 
 ## 6. Run the Application
 
@@ -185,11 +186,8 @@ Project screenshots will be added soon.
 
 # 👩‍💻 Developer
 
-**Keeya**
+**Keertana Priya A**
 
-Bachelor of Technology (Information Technology)
-
-Aspiring AI & Machine Learning Engineer
 
 ---
 
@@ -198,5 +196,3 @@ Aspiring AI & Machine Learning Engineer
 This project was developed for educational and learning purposes.
 
 ---
-
-## ⭐ If you like this project, don't forget to give it a star!
