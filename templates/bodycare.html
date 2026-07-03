@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HerbalGlow</title>
-    <link rel="icon" href="../IMAGES/mainlogos.png" href="favicon.png">
-
-
-    <link rel="stylesheet" href="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="{{url_for('static',filename='IMAGES/mainlogos.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
@@ -25,6 +23,7 @@
     <!-- header bar -->
     <header class="main-header">HerbalGlow</header>
     <p style="text-align: center" class="header-subline">Handmade with care</p>
+    {% include "navbar.html" %}
     <!-- products-hair section -->
     <section class="products">
         <div class="container">
@@ -44,7 +43,7 @@
                 <!-- 1 st img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img27.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img27.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Body Butter</h3>
@@ -61,7 +60,7 @@
                 <!-- 2nd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img19.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img19.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Nourishing Body Wash</h3>
@@ -76,7 +75,7 @@
                 <!-- 3rd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img20.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img20.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Energy Scrub</h3>
@@ -96,7 +95,7 @@
                 <!-- 1 st img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img21.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img21.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Nourishing Body Oil</h3>
@@ -111,7 +110,7 @@
                 <!-- 2nd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img22.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img22.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Body Butter</h3>
@@ -126,7 +125,7 @@
                 <!-- 3rd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img23.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img23.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Deodorant</h3>
@@ -146,7 +145,7 @@
                 <!-- 1 st img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img24.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img24.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Sunscreen</h3>
@@ -161,7 +160,7 @@
                 <!-- 2nd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img25.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img25.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Hand Cream</h3>
@@ -176,7 +175,7 @@
                 <!-- 3rd img -->
                 <div class="product-details">
                     <div class="product-img">
-                        <img src="../IMAGES/img26.png" class="img-fluid d-block mx-auto" alt="">
+                        <img src="{{ url_for('static', filename='IMAGES/img26.png') }}" class="img-fluid d-block mx-auto" alt="">
                     </div>
                     <div class="product-text">
                         <h3>HerbalGlow Foot Cream</h3>
@@ -206,7 +205,8 @@
 
     <!-- script -->
     <!-- offline -->
-    <script src="../BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}
+"></script>
 
 </body>
 

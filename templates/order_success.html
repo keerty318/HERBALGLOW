@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HerbalGlow</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='IMAGES/mainlogos.png') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="order">
+    {% include "navbar.html" %}
+
+<div class="container py-5">
+
+    <div class="card shadow-lg border-0 mx-auto" style="max-width:700px;border-radius:18px;">
+
+        <div class="card-body p-5 text-center">
+
+            
+
+            <h1 class="fw-bold text-success mt-2">
+                Order Confirmed!
+            </h1>
+
+            <p class="text-muted fs-5">
+                Thank you for choosing
+                <strong class="text-success">HerbalGlow</strong>.
+                Your payment has been received successfully.
+            </p>
+
+            <hr class="my-4">
+
+            <div class="row text-start">
+
+                <div class="col-6 mb-3">
+                    <h6 class="text-muted">Order ID</h6>
+                    <h4>
+                        <span class="badge bg-dark px-3 py-2">
+                            #{{ order_id }}
+                        </span>
+                    </h4>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <h6 class="text-muted">Payment Status</h6>
+                    <span class="badge bg-success fs-6 px-3 py-2">
+                        Paid ✓
+                    </span>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <h6 class="text-muted">Order Status</h6>
+                    <span class="badge bg-success fs-6 px-3 py-2">
+                        PLACED
+                    </span>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <h6 class="text-muted">Support</h6>
+                    <strong>24 x 7</strong>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <div class="text-start">
+
+                <h5 class="text-success mb-3">
+                    What happens next?
+                </h5>
+
+                <p class="mb-2">
+                    ✅ Your order has been successfully placed.
+                </p>
+
+                <p class="mb-2">
+                    📦 Our team will begin processing your order.
+                </p>
+
+                <p class="mb-2">
+                    📞 We will contact you shortly to confirm your order.
+                </p>
+
+                <p class="mb-0">
+                    🚚 Your handmade herbal products will be prepared with care.
+                </p>
+
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3 text-success">
+                Need Help?
+            </h5>
+
+            <p class="mb-1">
+                📞 <strong>+91 7876133093</strong>
+            </p>
+
+            <p class="mb-4">
+                ✉️ <strong>herbalglow@gmail.com</strong>
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <a href="/products/face"
+                    class="btn btn-outline-success btn-lg">
+                    Continue Shopping
+                </a>
+
+                <a href="/my_orders"
+                    class="btn btn-success btn-lg">
+                    View My Orders
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+
+</html>

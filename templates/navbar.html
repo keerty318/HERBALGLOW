@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerbalGlow</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-herbal">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="/home">
+                <img src="{{ url_for('static', filename='IMAGES/mainlogos.png') }}" alt="HerbalGlow">
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNav">
+
+                <div class="offcanvas-header">
+
+                    <h5 class="offcanvas-title">
+                        HerbalGlow
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>
+
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="single-menu-list ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">
+                                <i class="fa-solid fa-house"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/quiz">
+                                <i class="fa-solid fa-gem"></i>
+                                Discover Your Skin
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/face">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                Homemade Herbal Creations
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cart">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                Your Herbal Basket
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/my_orders">
+                                <i class="fa-solid fa-box"></i>
+                                My Orders
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/connectwithus">
+                                <i class="fa-solid fa-phone"></i>
+                                Connect with Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</body>
+
+</html>

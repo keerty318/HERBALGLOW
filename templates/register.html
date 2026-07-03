@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HerbalGlow</title>
+   <link rel="icon" href="{{url_for('static',filename='IMAGES/mainlogos.png')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="login">
+
+  
+  <section class="register">
+   
+
+      <div class="login-heading">
+        <h2>Sign Up</h2>
+      </div>
+
+      <form class="login-form" action="/register" method="post">
+
+        <div class="form-group">
+          <div class="form-group">
+            <label >👤Username</label>
+            <input type="text" class="form-control" required name="uname">
+          </div>
+
+          <div class="form-group">
+            <label style="font-size: large;">📞Phone Number</label>
+            <input type="number" class="form-control" required name="phone">
+          </div>
+
+          <div class="form-group">
+            <label style="font-size: large;">✉️Email</label>
+            <input type="email" class="form-control" required name="mail">
+          </div>
+
+          <div class="form-group">
+            <label style="font-size: large;">🔑Password</label>
+            <input type="password" class="form-control" required name="pwd">
+          </div>
+          <div class="form-group">
+              <label>Address</label>
+              <textarea class="form-control textarea" required name="address"></textarea>
+          </div>
+
+
+          <div class="form-group">
+            <button type="submit" class="btn"
+              style="background:linear-gradient(to right,#0097b2,#7ed957); color:white; border:none;padding-left: 34px;padding-right :34px;font-size: 20px;">
+              sign-up
+            </button>
+          </div>
+
+
+
+      </form>
+      <!-- this is to throw the error or success msg from flask -->
+
+      <!-- jijang -->
+      {% if message %}
+      <p style="text-align:center; font-weight:bold;">
+        {{ message }}
+      </p>
+      {% endif %}
+
+      
+
+    
+  </section>
+
+
+
+  <script src="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+
+</html>

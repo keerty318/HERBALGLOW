@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HerbalGlow</title>
+    <link rel="icon" href="{{url_for('static',filename='IMAGES/mainlogos.png')}}">
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="cart">
+  <!-- watsapp logo -->
+  <a href="https://wa.me/918903077052" class="watsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="watsapp">
+
+  </a>
+  <!-- header bar -->
+  <header class="main-header">HerbalGlow</header>
+  <p style="text-align: center" class="header-subline">Handmade with care</p>
+  {% include "navbar.html" %}
+  <section class="cart">
+    <h1 style="color: goldenrod;font-size: 50px; ">Your Herbal Basket</h1>
+
+
+
+    <div class="container my-5">
+
+
+
+      {% if cart %}
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          {% for item in cart %}
+          <div class="d-flex justify-content-between py-3 border-bottom">
+
+            <div>
+              <div class="fw-semibold" style="font-size: 20px; color: purple;">{{ item.prod_name }}</div>
+              <div class="mt-2">
+
+                <a href="/decrease_qty/{{ item.cart_id }}" class="btn btn-sm btn-outline-danger">
+                  −
+                </a>
+
+                <span class="mx-3 fw-bold">
+                  {{ item.cart_qty }}
+                </span>
+
+                <a href="/increase_qty/{{ item.cart_id }}" class="btn btn-sm btn-outline-success">
+                  +
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="fw-semibold" style="font-size: 20px; color:purple;">
+              ₹{{ item.prod_price }}
+            </div>
+
+          </div>
+          {% endfor %}
+
+          <div class="d-flex justify-content-between mt-4">
+            <span class="fw-bold" style="font-size: 20px" ;>Total</span>
+            <span class="fw-bold fs-5">₹{{ tot_amt }}</span>
+          </div>
+
+          <div class="d-flex justify-content-between mt-4">
+            <a href="/products/face" class="btn btn-success animate-btn">
+              Shop more
+            </a>
+            <!-- <a href="/place_order" class="btn btn-success animate-btn">
+          Place order
+        </a> -->
+            <button id="rzp-button" class="btn btn-success animate-btn">
+              Place Order
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      {% else %}
+
+      <h3 class="text-center mt-4"><span style="font-size: 300px;margin-bottom: 30px;">🧺</span><br>Your
+        basket is empty </h3>
+      <h6>Discover our herbal ingredients and start your natural skincare journey.</h6>
+      <a href="/products/face" class="btn btn-success "
+        style="margin-top: 20px;padding-left: 30px;padding-right: 30px;padding-bottom: 10px;padding-top: 10px; font-size: 20px;">Shop
+        Now</a>
+
+      {% endif %}
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!-- payment integration -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    document.getElementById("rzp-button").onclick = function (e) {
+
+      var options = {
+        key: "{{ razorpay_key }}",
+        amount: "{{ tot_amt * 100 }}",
+        currency: "INR",
+        name: "HerbalGlow",
+        description: "Herbal Product Purchase",
+        order_id: "{{ razorpay_order_id }}",
+
+        handler: function (response) {
+
+          window.location.href =
+            "/place_order?payment_id=" +
+            response.razorpay_payment_id;
+
+        },
+
+        theme: {
+          color: "#2E7D32"
+        }
+      };
+
+      var rzp = new Razorpay(options);
+
+      rzp.open();
+
+      e.preventDefault();
+    };
+  </script>
+
+  <script
+    src="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+
+</body>
+
+</html>

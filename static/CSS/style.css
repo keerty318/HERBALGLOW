@@ -1,10 +1,10 @@
 
-
 /* Universal  */
 *{
     padding: 0px;
     margin: 0px;
-    text-decoration: none;   
+    text-decoration: none; 
+    list-style-type: none;  
 }
 body{
     overflow-x: hidden;
@@ -46,7 +46,9 @@ header{
 /* keep your existing look but allow the offcanvas to become inline on large screens */
 .navbar.custom-herbal {
     background: linear-gradient(to right, #0097b2, #7ed957);
-    padding: 5px 12px;
+    /* padding: 5px 12px; */
+    padding: 5px 0;
+
     min-height: 90px;   
     height: auto;
     align-items: center;
@@ -55,9 +57,7 @@ header{
 /* logo */
 .navbar .navbar-brand img {
     width: auto;
-    height: 100px;
-    /* height: auto; */
-    /* max-width: 100px; */
+    height: 120px;
     object-fit: contain;
 }
 
@@ -71,7 +71,8 @@ header{
     color: black!important;
     font-style: italic;
     font-weight: bold;
-    padding: 12px 10px;
+    font-size: 18px;  
+    padding: 12px 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .single-menu-list .nav-link i { margin-right: 8px; }
@@ -130,7 +131,8 @@ header{
     text-align: center;
     line-height: 1.5;
     font-family: 'Playfair Display', serif;
-    padding-top: 30px;   
+    padding-top: 30px;
+    /* display: inline-block;    */
 }
 .tagline h1{
     color: #388E3C;
@@ -140,6 +142,20 @@ header{
 .tagline p{
     margin-top: 20px;
 }
+.tagline-btn {
+    display: inline-block;
+    transition: all 0.25s ease;
+    
+}
+
+.tagline-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(to right, #0097b2, #7ed957);
+    border: none;
+}
+
+
 /* ----------------------------------------------------------------------------------------------------------- */
 /* home-our story para */
 .about-us{
@@ -254,6 +270,9 @@ header{
   background-color: white;
   box-sizing: border-box;
   margin: 30px;
+  /* margin: 0; */
+
+
 }
 
 .testimonial-heart {
@@ -540,6 +559,43 @@ h3{
   color: white !important;
 }
 /* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* cart */
+
+.cart{
+    text-align: center;
+    background-color: #F0FFF0;
+    
+}
+.success-card {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+.animate-btn {
+    transition: all 0.25s ease;
+}
+
+.animate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(to right, #0097b2, #7ed957);
+    border: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* order */
+.orders {
+    background-color: whitesmoke;
+    margin-bottom: 50px;   
+     
+}
+.order{
+    background-color: #F0FFF0;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* contact page */
  .contact-us{
     background-image: url(../IMAGES/contact-us.jpg);
@@ -626,7 +682,7 @@ h3{
 }
 /* -------------------------------------------------------------------------------------------------------- */
 /* LOGIN PAGE */
-.login{
+/* .login{
     background-color:#F0FFF0;
 }
 .login-heading{
@@ -642,8 +698,7 @@ h3{
     align-items: center;
     margin-top: 10px;
 }
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* REGISTER */
+
 .register{
     border: solid 1px #F0FFF0;
     max-width: 300px;
@@ -651,19 +706,109 @@ h3{
     border-radius: 25px;
     padding-right: 30px;
     padding-bottom: 30px;
-    /* background-color:#F0FFF0; */
-    /* background-color: #FAFAF0; */
+    
     background-color:white;
     
+} */
+
+
+
+
+
+/* Background */
+.login{
+    background:#F0FFF0;
+    min-height:100vh;
 }
 
+/* Card */
+.register{
+    width:550px;
+    max-width:92%;
+    margin:50px auto;
+    background:#fff;
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+/* Heading */
+.login-heading{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.login-heading h2{
+    font-size:46px;
+    font-weight:700;
+    color:#222;
+}
+
+/* Form */
+.login-form{
+    display:flex;
+    flex-direction:column;
+}
+
+/* Labels */
+.login-form label{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+/* Inputs */
+.login-form input,
+.login-form textarea{
+
+    width:100%;
+    height:52px;
+
+    border-radius:10px;
+
+    margin-bottom:22px;
+
+    font-size:17px;
+}
+
+.login-form textarea{
+
+    height:110px;
+    resize:none;
+}
+
+/* Forgot password */
+.login-form .text-end{
+
+    margin-bottom:20px;
+}
+
+/* Button */
+.login-form button{
+
+    width:100%;
+    height:52px;
+
+    font-size:22px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+/* Bottom text */
+.login-form p{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:18px;
+}
+a{
+    text-decoration: none;
+}
 /* --------------------------------------the end------------------------------------------------------------------------------- */
-
-
-
-
-
-
 
 
 

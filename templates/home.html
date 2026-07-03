@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HerbalGlow</title>
+    <link rel="icon" href="{{url_for('static',filename='IMAGES/mainlogos.png')}}">
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+
+  <!-- next immediate link is  for bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<!-- home page new with bootstrap -->
+
+<body class="home">
+  <!-- watsapp logo -->
+  <a href="https://wa.me/918903077052" class="watsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="watsapp">
+
+  </a>
+
+  <!-- header bar -->
+  <header class="main-header">HerbalGlow</header>
+  <p style="text-align: center" class="header-subline">Handmade with care</p>
+
+  {% include "navbar.html" %}
+  <!-- section-1-tag-line -->
+  <section class="tagline">
+    <div class="container text-center">
+      <h1>Glow Naturally with <br />Handmade Herbal Care</h1>
+      <p>Simple herbal routines crafted from nature's purest ingredients.</p>
+      <a href="/quiz" class="btn btn-success rounded-pill px-4 py-2 mt-3 tagline-btn">Know Your Skin</a>
+    </div>
+  </section>
+
+
+  <!-- section:our-story -->
+  <section class="ourstory">
+    <div class="container">
+      <div class="about-us d-flex flex-column flex-md-row align-items-center gap-4">
+
+        <div class="about-us-img flex-shrink-0">
+          <img src="{{ url_for('static', filename='IMAGES/ourstory.png') }}" alt="our-story" class="img-fluid" />
+        </div>
+
+        <div class="about-us-para">
+          <h2
+            style="color:#388e3c; font-family:'Times New Roman', Times, serif; font-weight:bolder; font-size:xx-large;">
+            Our Story
+          </h2>
+          <hr>
+
+          <p class="p1">
+            HerbalGlow was born from a simple belief that skincare should be pure,
+            honest, and kind.At HerbalGlow, we believe skin care should be simple,
+            honest, and rooted in nature.
+          </p>
+
+          <p class="p1">
+            No chemicals. No compromises. Just pure, effective herbal care that lets
+            your natural beauty shine through.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- section:handmade with care para -->
+  <section class="handmade-with-care">
+    <div class="container">
+      <div class="handmade-content row align-items-center g-4">
+
+        <div class="handmade-para col-12 col-md-6">
+          <h2
+            style="color:#388e3c; padding-bottom:20px; font-family:'Times New Roman', Times, serif; font-weight:bolder; font-size:xx-large;">
+            Handmade with Care
+          </h2>
+          <hr>
+
+          <p class="p1">
+            Each HerbalGlow creation is made in small batches to ensure
+            freshness and potency. We source our herbs carefully and blend them
+            with love.
+          </p>
+
+          <p class="p1">
+            No mass production. No synthetic fillers. Just pure herbal goodness
+            that respects your skin and our planet.
+          </p>
+
+          <p class="p1">
+            We say no to harsh chemicals and yes to the gentle power of nature.
+            Your skin deserves nothing less than the earth's finest herbs,
+            blended with care
+          </p>
+        </div>
+
+        <div class="handmade-content-img col-12 col-md-6 text-center">
+          <img src="{{ url_for('static', filename='IMAGES/handmade-img.png') }}" alt="our-story" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="review-section">
+    <div class="review-bg">
+      <div class="container">
+        <div class="review-heading text-center">
+          <h2
+            style="color:#388e3c; padding-bottom:20px; font-family:'Times New Roman', Times, serif; font-weight:bolder; font-size:xx-large;">
+            What Our Community Says
+          </h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- <div class="col-12 col-md-6"> -->
+          <div class="review-p1 text-center">
+            <i class="fa-solid fa-heart testimonial-heart"></i>
+            <p style="font-style: italic">
+              "HerbalGlow transformed my sensitive skin! The natural ingredients are so gentle yet effective."
+            </p>
+            <p style="color:#388e3c; font-weight:bolder">— Priya S.</p>
+          </div>
+          <!-- </div> -->
+
+          <!-- <div class="col-12 col-md-6"> -->
+          <div class="review-p1 text-center">
+            <i class="fa-solid fa-heart testimonial-heart"></i>
+            <p style="font-style: italic">
+              "I love knowing exactly what goes on my skin. These handmade products are pure magic."
+            </p>
+            <p style="color:#388e3c; font-weight:bolder">— Anjali M.</p>
+          </div>
+          <!-- </div> -->
+
+          <!-- <div class="col-12 col-md-6"> -->
+          <div class="review-p1 text-center">
+            <i class="fa-solid fa-heart testimonial-heart"></i>
+            <p style="font-style: italic">
+              "The quiz helped me understand my skin better. My custom routine works perfectly!"
+            </p>
+            <p style="color:#388e3c; font-weight:bolder">— Ram K.</p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer section -->
+  <section class="footer-section">
+    <div class="container">
+
+      <div class="footer">
+        <div class="footer-para">
+          <div>
+            <h3 class="footer-heading">HerbalGlow</h3>
+          </div>
+          <p>Handmade herbal skincare crafted from nature's purest ingredients. Chemical-free, honest, and made with
+            care.</p>
+        </div>
+
+        <div class="footer-nav">
+          <h3 class="footer-heading">Explore</h3>
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/quiz">Discover Your Skin</a></li>
+            <li><a href="/products/face">Homemade Herbal Creations</a></li>
+            <li><a href="/cart">Your Herbal Basket</a></li>
+            <li><a href="/connectwithus">Connect with us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-support-follow">
+          <h3 class="footer-heading">Follow us on</h3>
+          <div class="social-icons">
+            <!-- <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a> -->
+            <a href="https://www.instagram.com/minimalist_skin/" target="_blank" class="social-icon-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=how+to+find+your+skin+type" target="_blank"
+              class="social-icon-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line">
+      <p style="text-align: center;color: white;padding-bottom: 30px;padding-top: 30px;">
+        © 2025 HerbalGlow — Handmade with Care
+      </p>
+
+    </div>
+  </section>
+
+  <script
+    src="{{ url_for('static', filename='BOOTSTRAP/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
